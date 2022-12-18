@@ -1,5 +1,8 @@
 import { css, Global } from "@emotion/react";
 
+/**
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ */
 const globalCss = css`
 	*,
 	*::before,
@@ -17,11 +20,13 @@ const globalCss = css`
 
 	:root {
 		color-scheme: light dark;
+		line-height: 1.5;
 	}
 
 	html {
-		-webkit-text-size-adjust: none; /* for iOS Safari */
-		text-size-adjust: none; /* for other mobile browsers */
+		-webkit-text-size-adjust: none; // for iOS Safari
+		text-size-adjust: none; // for other mobile browsers
+		-webkit-font-smoothing: antialiased; // for MacOS
 
 		@media (prefers-reduced-motion: no-preference) {
 			scroll-behavior: smooth;
@@ -33,7 +38,11 @@ const globalCss = css`
 		min-height: 100%;
 	}
 
-	img {
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
 		display: block;
 		max-width: 100%;
 	}
@@ -46,6 +55,13 @@ const globalCss = css`
 
 	a {
 		text-underline-position: under;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
 	}
 
 	label,
@@ -75,6 +91,17 @@ const globalCss = css`
 		padding: 0;
 		text-align: inherit;
 		width: auto;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+		hyphens: auto;
 	}
 `;
 
