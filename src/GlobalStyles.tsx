@@ -73,6 +73,7 @@ const globalCss = css`
 		margin: 0;
 		overflow: visible;
 		padding: 0;
+		text-align: inherit;
 		width: auto;
 	}
 `;
