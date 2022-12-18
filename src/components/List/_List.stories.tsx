@@ -22,21 +22,21 @@ type Story = StoryObj<typeof List>;
 export const _List_: Story = {
 	render: (args) => (
 		<List {...args}>
-			<li>
+			<div>
 				Cambrian explosion emerged into consciousness cosmic fugue a
 				still more glorious dawn awaits two ghostly white figures in
 				coveralls and helmets are softly dancing science.
-			</li>
-			<li>
+			</div>
+			<div>
 				Hearts of the stars muse about preserve and cherish that pale
 				blue dot courage of our questions preserve and cherish that pale
 				blue dot concept of the number one.
-			</li>
-			<li>
+			</div>
+			<div>
 				Rings of Uranus bits of moving fluff network of wormholes with
 				pretty stories for which there's little good evidence Flatland
 				bits of moving fluff.
-			</li>
+			</div>
 		</List>
 	),
 };

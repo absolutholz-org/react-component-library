@@ -1,7 +1,7 @@
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 export interface IList {
-	children: ReactElement[];
+	children: ReactNode[];
 	className?: string;
 	type?: "ul" | "ol" | "menu";
 }

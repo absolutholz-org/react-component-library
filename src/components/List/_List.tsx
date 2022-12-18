@@ -5,11 +5,9 @@ import * as S from "./_List.styled";
 export function List({ className, children, type = "ul" }: IList) {
 	return (
 		<S.List as={type} className={className} role="list">
-			{Children.map(children, (child) =>
-				cloneElement(child, {
-					role: "listitem",
-				})
-			)}
+			{Children.map(children, (child) => (
+				<li role="listitem">{child}</li>
+			))}
 		</S.List>
 	);
 }
