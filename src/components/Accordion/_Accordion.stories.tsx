@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 
 import { Accordion } from ".";
-import { ExpandablePanel } from "../ExpandablePanel";
+import { Details } from "../Details";
 
 export default {
 	/* 👇 The title prop is optional.
@@ -11,10 +11,6 @@ export default {
 	title: "Accordion",
 	component: Accordion,
 	parameters: { controls: { sort: "requiredFirst" } },
-	argTypes: {
-		onCollapse: { action: "collapsed" },
-		onExpand: { action: "expanded" },
-	},
 } as Meta<typeof Accordion>;
 
 type Story = StoryObj<typeof Accordion>;
@@ -27,30 +23,30 @@ type Story = StoryObj<typeof Accordion>;
 export const _Accordion_: Story = {
 	render: (args) => (
 		<Accordion {...args}>
-			<ExpandablePanel
+			<Details
 				id="1"
 				slotControl="1"
-				onExpand={() => console.log("expanded")}
-				onCollapse={() => console.log("collapsed")}
+				onOpen={() => console.log("opened")}
+				onClose={() => console.log("closed")}
 			>
 				<div>Panel content 1</div>
-			</ExpandablePanel>
-			<ExpandablePanel
+			</Details>
+			<Details
 				id="2"
 				slotControl="2"
-				onExpand={() => console.log("expanded")}
-				onCollapse={() => console.log("collapsed")}
+				onOpen={() => console.log("opened")}
+				onClose={() => console.log("closed")}
 			>
 				<div>Panel content 2</div>
-			</ExpandablePanel>
-			<ExpandablePanel
+			</Details>
+			<Details
 				id="3"
 				slotControl="3"
-				onExpand={() => console.log("expanded")}
-				onCollapse={() => console.log("collapsed")}
+				onOpen={() => console.log("opened")}
+				onClose={() => console.log("closed")}
 			>
 				<div>Panel content 3</div>
-			</ExpandablePanel>
+			</Details>
 		</Accordion>
 	),
 	args: {},

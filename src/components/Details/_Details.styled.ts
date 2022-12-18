@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const ExpandablePanel_Control = styled.button`
+export const Details_Summary = styled.button`
 	display: block;
 	width: 100%;
 `;
