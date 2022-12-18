@@ -24,7 +24,7 @@ type Story = StoryObj<typeof Accordion>;
  * See https://storybook.js.org/docs/7.0/react/api/csf
  * to learn how to use render functions.
  */
-export const Primary: Story = {
+export const _Accordion_: Story = {
 	render: (args) => (
 		<Accordion {...args}>
 			<ExpandablePanel

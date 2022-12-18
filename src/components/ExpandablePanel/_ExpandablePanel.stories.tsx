@@ -23,7 +23,7 @@ type Story = StoryObj<typeof ExpandablePanel>;
  * See https://storybook.js.org/docs/7.0/react/api/csf
  * to learn how to use render functions.
  */
-export const Primary: Story = {
+export const _ExpandablePanel_: Story = {
 	render: (args) => <ExpandablePanel {...args} />,
 	args: {
 		children:
