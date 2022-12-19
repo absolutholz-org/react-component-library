@@ -15,7 +15,6 @@ export function Accordion({ children }: IAccordion): JSX.Element {
 	});
 
 	const onOpen = (id: string) => {
-		console.log("opened", { id, childrenRefs });
 		childrenRefs
 			.filter((childRef) => childRef.id !== id)
 			.forEach(
