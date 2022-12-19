@@ -2,9 +2,9 @@ import { Children, cloneElement } from "react";
 import { IList } from "./_List.annotations";
 import * as S from "./_List.styled";
 
-export function List({ className, children, type = "ul" }: IList) {
+export function List({ className, children, listType = "ul" }: IList) {
 	return (
-		<S.List as={type} className={className} role="list">
+		<S.List as={listType} className={className} role="list">
 			{Children.map(children, (child) => (
 				<li role="listitem">{child}</li>
 			))}

@@ -1,7 +1,15 @@
-import { ReactNode } from "react";
+import { MenuHTMLAttributes, OlHTMLAttributes, ReactNode } from "react";
 
 export interface IList {
 	children: ReactNode[];
 	className?: string;
-	type?: "ul" | "ol" | "menu";
+	listType?: "ul" | "ol" | "menu";
 }
+
+export type IMenuList = MenuHTMLAttributes<HTMLMenuElement> &
+	Omit<IList, "listType">;
+
+export type IUList = Omit<IList, "listType">;
+
+export type IOList = OlHTMLAttributes<HTMLMenuElement> &
+	Omit<IList, "listType">;
