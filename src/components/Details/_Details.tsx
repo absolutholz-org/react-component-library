@@ -5,8 +5,7 @@ import type { IDetails, IDetailsControls } from "./_Details.annotations";
 import * as S from "./_Details.styled";
 
 /**
- * https://www.w3.org/WAI/ARIA/apg/example-index/accordion/accordion
- * https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-accordion
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
  */
 export const Details = forwardRef(
 	(
@@ -14,8 +13,7 @@ export const Details = forwardRef(
 			children,
 			id,
 			isInitiallyOpen = false,
-			onClose = () => {},
-			onOpen = () => {},
+			onToggle = () => {},
 			slotControl,
 		}: IDetails,
 		forwardedRef: Ref<IDetailsControls>
@@ -25,28 +23,21 @@ export const Details = forwardRef(
 
 		const [isOpen, setIsOpen] = useState<boolean>(isInitiallyOpen);
 
-		const close = () => {
-			setIsOpen(false);
-			onClose({ id });
-		};
-
-		const open = () => {
-			setIsOpen(true);
-			onOpen({ id });
+		const open = (state: boolean) => {
+			setIsOpen(state);
+			onToggle(state);
 		};
 
 		const toggle = () => {
-			isOpen ? close() : open();
+			open(!isOpen);
 		};
 
 		useImperativeHandle(
 			forwardedRef,
 			() => ({
-				close,
 				open,
-				toggle,
 			}),
-			[close, open, toggle]
+			[open]
 		);
 
 		return (

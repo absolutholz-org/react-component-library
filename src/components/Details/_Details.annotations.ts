@@ -4,13 +4,10 @@ export interface IDetails {
 	children: ReactNode;
 	id: string;
 	isInitiallyOpen?: boolean;
-	onClose?: ({ id }: { id: string }) => void;
-	onOpen?: ({ id }: { id: string }) => void;
+	onToggle?: (isOpen: boolean) => void;
 	slotControl: ReactNode;
 }
 
 export interface IDetailsControls {
-	close: () => void;
-	open: () => void;
-	toggle: () => void;
+	open: (isOpen: boolean) => void;
 }
