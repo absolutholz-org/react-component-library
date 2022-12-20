@@ -1,5 +1,6 @@
 import { Children, cloneElement } from "react";
-import { IList } from "./_List.annotations";
+
+import type { IList } from "./_List.annotations";
 import * as S from "./_List.styled";
 
 export function List({ className, children, listType = "ul" }: IList) {

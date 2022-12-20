@@ -1,7 +1,7 @@
 import { Children, cloneElement, createRef, RefObject } from "react";
 
-import { IDetailsControls } from "../Details/_Details.annotations";
-import { IAccordion } from "./_Accordion.annotations";
+import type { IDetailsControls } from "../Details/_Details.annotations";
+import type { IAccordion } from "./_Accordion.annotations";
 
 export function Accordion({ children }: IAccordion): JSX.Element {
 	const childrenRefs: {

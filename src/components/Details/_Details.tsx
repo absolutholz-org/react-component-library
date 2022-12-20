@@ -1,6 +1,7 @@
+import type { Ref } from "react";
 import { forwardRef, useImperativeHandle, useState } from "react";
 
-import { IDetails } from "./_Details.annotations";
+import type { IDetails, IDetailsControls } from "./_Details.annotations";
 import * as S from "./_Details.styled";
 
 /**
@@ -17,7 +18,7 @@ export const Details = forwardRef(
 			onOpen = () => {},
 			slotControl,
 		}: IDetails,
-		forwardedRef
+		forwardedRef: Ref<IDetailsControls>
 	): JSX.Element => {
 		const controlId = `details_control_${id}`;
 		const panelId = `details_panel_${id}`;
