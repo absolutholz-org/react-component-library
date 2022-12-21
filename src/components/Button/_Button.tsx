@@ -19,7 +19,7 @@ export function Button({
 			: S.Button_Tertiary;
 
 	return (
-		<ButtonVariant {...rest} as={nodeType}>
+		<ButtonVariant {...rest} as={nodeType} size={size}>
 			{children}
 		</ButtonVariant>
 	);

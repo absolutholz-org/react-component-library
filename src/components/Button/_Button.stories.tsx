@@ -30,6 +30,7 @@ export const _AsButton_: Story = {
 		children: "Button",
 		type: "button",
 		variant: "primary",
+		size: "inline",
 	},
 };
 
