@@ -29,9 +29,10 @@ export const _AsButtonGroup_: Story = {
 	render: (args) => (
 		<ButtonGroup {...args}>
 			<Button>Button</Button>
-			<Button variant="secondary">Button</Button>
+			<Button size="block" variant="secondary">
+				Button
+			</Button>
 			<Button variant="tertiary">Button</Button>
 		</ButtonGroup>
 	),
-	args: {},
 };
