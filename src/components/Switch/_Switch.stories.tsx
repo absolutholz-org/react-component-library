@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+import { useArgs } from "@storybook/preview-api";
 
 import { Switch } from ".";
 
@@ -23,7 +24,12 @@ type Story = StoryObj<typeof Switch>;
  * to learn how to use render functions.
  */
 export const _Switch_: Story = {
-	render: (args) => <Switch {...args} />,
+	render: (args) => {
+		const [{ isOn }, updateArgs] = useArgs();
+		const handleClose = () => updateArgs({ isOn: !isOn });
+
+		return <Switch {...args} onClick={handleClose} />;
+	},
 	args: {
 		id: "story",
 	},

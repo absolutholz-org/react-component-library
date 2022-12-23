@@ -28,7 +28,7 @@ export const Switch = styled.button`
 		transition-duration: 300ms;
 	}
 
-	&:active {
+	&:not([aria-readonly="true"]):active {
 		--switch-grow: ${KNOB_SIZE_IN_EM / 3}em;
 	}
 
