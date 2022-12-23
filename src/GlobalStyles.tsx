@@ -10,6 +10,12 @@ const globalCss = css`
 		box-sizing: border-box;
 	}
 
+	*::before,
+	*::after {
+		content: "";
+		display: inline-block;
+	}
+
 	* {
 		border: none;
 	}
