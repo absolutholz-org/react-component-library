@@ -1,0 +1,27 @@
+import { Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+
+# Stepper
+
+The stepper is for simplifying the entry of small quantities. It allows the user to quickly step through the allowed range using incremental and decremental buttons.
+
+⚠️ You need to wrap this component in an [OXForm](/docs/ui-oxide-23-oxform--form#form) and also use `react-hook-forms-latest`.
+
+## Standard variant
+
+The standard variant always displays the full component with both buttons and the number visible.
+
+<Canvas>
+    <Story id='ui-oxide-23-oxstepper--always-open' />
+</Canvas>
+
+## Close on minimum value
+
+When the minimum value is entered, we can optionally choose to display this as a closed element that first needs to be activated. This activation will set the component's value to one step above the minimum. Decreasing the value to the minimum will then close the element.
+
+<Canvas>
+    <Story id='ui-oxide-23-oxstepper--close-on-min-value' />
+</Canvas>
+
+## Component API
+
+<ArgsTable />
