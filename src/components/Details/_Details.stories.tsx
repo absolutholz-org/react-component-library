@@ -7,12 +7,11 @@ export default {
 	 * See https://storybook.js.org/docs/7.0/react/configure/overview#configure-story-loading
 	 * to learn how to generate automatic titles
 	 */
-	title: "Details",
+	title: "components/Details",
 	component: Details,
 	parameters: { controls: { sort: "requiredFirst" } },
 	argTypes: {
-		onClose: { action: "closed" },
-		onOpen: { action: "opened" },
+		onToggle: { action: "toggled" },
 	},
 } as Meta<typeof Details>;
 

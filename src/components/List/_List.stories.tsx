@@ -8,7 +8,7 @@ export default {
 	 * See https://storybook.js.org/docs/7.0/react/configure/overview#configure-story-loading
 	 * to learn how to generate automatic titles
 	 */
-	title: "List",
+	title: "components/List",
 	component: List,
 	parameters: {
 		controls: { sort: "requiredFirst", exclude: ["className", "listType"] },

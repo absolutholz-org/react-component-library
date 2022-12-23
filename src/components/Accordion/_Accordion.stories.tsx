@@ -8,7 +8,7 @@ export default {
 	 * See https://storybook.js.org/docs/7.0/react/configure/overview#configure-story-loading
 	 * to learn how to generate automatic titles
 	 */
-	title: "Accordion",
+	title: "components/Accordion",
 	component: Accordion,
 	parameters: { controls: { sort: "requiredFirst" } },
 } as Meta<typeof Accordion>;
